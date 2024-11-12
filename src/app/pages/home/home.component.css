@@ -1,0 +1,540 @@
+.main_title{
+    font-size: 2rem; 
+  }
+  .subtext_title{
+    text-align: center;
+  }
+  .page_welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main_title h1{
+    margin: 0.5rem;
+  }
+  .page_welcome button{
+    background-color: #68A014;
+    font-size: medium;
+    font-family: 'M PLUS 1';
+    color: white;
+    border-radius:6px;
+    align-self: center;
+    padding: 7px 10px; /* Padding */
+    text-decoration: none; /* Remove underline */
+    border: none;
+  }
+  #faq {
+    background-color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  #faq h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .faq-container{
+    display: flex;
+  }
+  
+  .faq-item {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 10px auto;
+    text-align: left;
+  }
+  
+  .faq-item h3 {
+    color: #68A014;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  header {
+    overflow: auto;
+  }
+  
+  body {
+      font-family:'M PLUS 1', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+  }
+  .navbar {
+      display: flex; /* Use flexbox for alignment */
+      justify-content: space-between; /* Space between logo and links */
+      align-items: center; /* Center items vertically */
+      background-color: #68A014; /* Dark background */
+      padding: 15px; /* Padding around navbar */
+      font-family: 'M PLUS 1';
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+  
+  }
+  
+  .logo img {
+      height: 40px; /* Adjust logo size */
+      border-radius:6px;
+  }
+  
+  .nav-links {
+      display: flex; /* Align links in a row */
+      border-radius:6px;
+  
+  }
+  
+  .nav-links a {
+      color: #F2F2F2; /* White text color */
+      text-align: center; /* Centered text */
+      padding: 14px 20px; /* Padding */
+      text-decoration: none; /* Remove underline */
+      border-radius:6px;
+  
+  }
+  
+  .log-in{
+    background-color: white; /* Light background on hover */
+      color: black; /* Black text on hover */
+  }
+  
+  .nav-links a:hover {
+      background-color: #ddd; /* Light background on hover */
+      color: black; /* Black text on hover */
+  }
+  
+  
+  main section {
+      padding: 20px; /* Add some padding */
+      margin: 20px 0; /* Add margin between sections */
+      background-color: #f9f9f9; /* Light background color */
+      border-radius: 8px; /* Rounded corners */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  main section h2 {
+      color: #000000; /* Darker color for headings */
+      font-family: 'M PLUS 1';
+      text-align: center;
+  }
+  .m-plus-1-font {
+    font-family: "M PLUS 1", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .integrante {
+      flex: 1;
+      background-color: white; /* Background color of the box */
+      padding: 20px; /* Space inside the box */
+      margin: 20px; /* Space outside the box */
+      border-radius: 8px; /* Rounded corners */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+      text-align: center;
+  }
+  .integrante img{
+      max-width: 120;
+      max-height: 200px; /* Maintain aspect ratio */
+      border-radius: 5px; /* Optional: rounded corners for images */
+  }
+  .integrante p{
+      text-align: justify;
+      font-size: 14px;
+  }
+  .container-integrantes {
+      display: flex; /* Use flexbox */
+      justify-content: space-between; /* Space elements evenly */
+      flex-wrap: wrap; /* Allow wrapping if needed */
+  }
+  
+  .planesyprecios {
+    display: flex;
+    justify-content: space-between; /* Optional: space out items evenly */
+  }
+  
+  .planesypreciosUnit {
+    flex: 1; /* Each unit will take equal space */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 10px; /* Add some margin between the units */
+  }
+  
+  .planesypreciosUnit h2 {
+    color:rgb(104 160 20)
+  }
+  
+  
+  .container {
+      width: 90%;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+  }
+  
+  /* Success Cases */
+  #success {
+      background-color: #ffffff;
+      padding: 60px 0;
+      text-align: center;
+  }
+  
+  #success h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+  }
+  
+  .case {
+      background-color: #fff;
+      padding: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      max-width: 700px;
+      margin: 10px auto;
+      text-align: left;
+      flex: 1;
+  }
+  
+  .case h3 {
+      color: #000000;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      text-align: center;
+  }
+  
+  .case img {
+      display: block;
+      margin: 20px auto; 
+      max-width: 100%;    
+      height: auto;   
+      border-radius: 10px;
+  }
+  /* Footer */
+  footer {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+  }
+  
+  footer a {
+      color: #68A014;
+      text-decoration: none;
+      margin: 0 10px;
+  }
+  
+  footer a:hover {
+      text-decoration: underline;
+  }
+  
+  @function breakpoint-max($name, $breakpoints: $mq-breakpoints) {
+    $max: map-get($breakpoints, $name);
+    @return if($max and $max > 0, $max - 1, null);
+  }
+  
+  @function breakpoint-min($name, $breakpoints: $mq-breakpoints) {
+    $min: map-get($breakpoints, $name);
+    @return if($min != 0, $min, null);
+  }
+  
+  @mixin tn {
+    $max: breakpoint-max(tn, $mq-breakpoints);
+    @media(max-width: #{$max}px) {
+      @content;
+    }
+  }
+  
+  @mixin xxs {
+    $max: breakpoint-max(xxs, $mq-breakpoints);
+    @media(max-width: #{$max}px) {
+      @content;
+    }
+  }
+  
+  @mixin xs {
+    $max: breakpoint-max(xs, $mq-breakpoints);
+    @media(max-width: #{$max}px) {
+      @content;
+    }
+  }
+  
+  @mixin sm {
+    $max: breakpoint-max(sm, $mq-breakpoints);
+    @media(max-width: #{$max}px) {
+      @content;
+    }
+  }
+  
+  @mixin md {
+    $max: breakpoint-max(md, $mq-breakpoints);
+    @media(max-width: #{$max}px) {
+      @content;
+    }
+  }
+  
+  @mixin lg {
+    $max: breakpoint-max(lg, $mq-breakpoints);
+    @media(max-width: #{$max}px) {
+      @content;
+    }
+  }
+  
+  @mixin xl {
+    $max: breakpoint-max(xl, $mq-breakpoints);
+    @media(max-width: #{$max}px) {
+      @content;
+    }
+  }
+  
+  @mixin xxl {
+    $max: breakpoint-max(xxl, $mq-breakpoints);
+    @media(max-width: #{$max}px) {
+      @content;
+    }
+  }
+  
+  @mixin xxxl {
+    $max: breakpoint-max(xxxl, $mq-breakpoints);
+    @media(max-width: #{$max}px) {
+      @content;
+    }
+  }
+  
+  @mixin max {
+    $max: breakpoint-max(max, $mq-breakpoints);
+    @media(max-width: #{$max}px) {
+      @content;
+    }
+  }
+  
+  @mixin mq-down($name, $breakpoints: $mq-breakpoints) {
+    $max: breakpoint-max($name, $breakpoints);
+    @if $max {
+      @media (max-width: #{$max}px) {
+        @content;
+      }
+    } @else {
+      @content;
+    }
+  }
+  
+  @mixin mq-between($lower, $upper, $breakpoints: $mq-breakpoints) {
+    $min: breakpoint-min($lower, $breakpoints);
+    $max: breakpoint-max($upper, $breakpoints);
+  
+    @media (min-width: #{$min}px) and (max-width: #{$max}px) {
+      @content;
+    }
+  }
+  .precios {
+    &.root {
+      position: relative;
+      width: 1440px;
+      height: 562px;
+      min-height: 562px;
+      background-color: rgb(249 249 249);
+    }
+  
+    .hero_title {
+      position: absolute;
+      inset: 113px auto auto 561px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 318px;
+      height: 64px;
+      font: 700 39.69px/1.61 Inter, Helvetica, Arial, serif;
+      color: rgb(51 51 51);
+      text-align: center;
+      letter-spacing: -0.2px;
+    }
+  
+    .color {
+      position: absolute;
+      inset: 217px 736px 80px 419px;
+      display: flex;
+      flex-direction: column;
+      width: 285px;
+      height: 265px;
+    }
+  
+    .color1 {
+      min-height: 265px;
+      background-color: rgb(249 249 249);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px 0 rgb(0 0 0 / 10%);
+    }
+  
+    .title {
+      position: absolute;
+      inset: 265.5px 831px 249.5px 514px;
+      display: flex;
+      flex-direction: column;
+      width: 95px;
+      height: 47px;
+    }
+  
+    .title1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgb(104 160 20);
+      text-align: center;
+    }
+  
+  
+    .subtitle {
+      position: absolute;
+      inset: 335.5px auto auto 513px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 97px;
+      height: 39px;
+      font: 700 21.94px/1.75 Inter, Helvetica, Arial, serif;
+      color: rgb(51 51 51);
+      text-align: center;
+    }
+  
+    .paragraph {
+      position: absolute;
+      inset: 394px auto auto 479px;
+      display: flex;
+      align-items: center;
+      width: 205px;
+      height: 52px;
+      font: 400 14px/1.82 Inter, Helvetica, Arial, serif;
+      color: rgb(51 51 51);
+    }
+  
+    .color11 {
+      position: absolute;
+      inset: 217px 419px 80px 734px;
+      display: flex;
+      flex-direction: column;
+      width: 287px;
+      height: 265px;
+    }
+  
+    .title2 {
+      
+      inset: 265.5px 538px 249.5px 854px;
+      display: flex;
+      flex-direction: column;
+      width: 48px;
+      height: 47px;
+    }
+  
+    .subtitle1 {
+      position: absolute;
+      inset: 335.5px auto auto 830.5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 94px;
+      height: 39px;
+      font: 700 21.19px/1.81 Inter, Helvetica, Arial, serif;
+      color: rgb(51 51 51);
+      text-align: center;
+    }
+  
+    .paragraph1 {
+      position: absolute;
+      inset: 394px auto auto 794px;
+      display: flex;
+      align-items: center;
+      width: 208px;
+      height: 52px;
+      font: 400 14.13px/1.81 Inter, Helvetica, Arial, serif;
+      color: rgb(51 51 51);
+    }
+  }
+  /*demostration*/
+  #demo {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  #demo h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .demo-gallery {
+    display: flex;
+    flex:1;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .demo-item {
+    flex:1;
+    text-align: center;
+    display: flex;
+  
+  }
+  
+  .demo-gallery img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    align-content: center;
+  }
+  
+  .demo-item p {
+    margin-top: 10px; 
+    font-size: 1rem; 
+    color: #333; 
+  }
+  .item-box {
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 20px; 
+    max-width: 300px; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+  }
+  
+  .demo-item p {
+    margin-top: 10px; 
+    font-size: 1rem; 
+    color: #333; 
+  }
+  
+  .section7 {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column; /* Ensure items are in a row */
+    align-items: center; /* Center children horizontally */
+  
+  }
+  
+  .section7_mini {
+    flex: 1;
+    display: flex; /* Add this to make its children flex items */
+    flex-direction: row; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+  }
+  
+  .section7 img{
+    max-height: 200px;
+    max-width: 300px;
+    margin: 0 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  
