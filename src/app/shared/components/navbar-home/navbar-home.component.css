@@ -57,3 +57,10 @@
   .navbar-toggler {
     background-color: #E5E5E5; /* Toggler con borde claro */
   }
+  .logo-navbar{
+    max-width: 250px;
+    margin-right: 20px;
+  }
+  .logo-navbar img{
+    max-width: 230px;
+  }
