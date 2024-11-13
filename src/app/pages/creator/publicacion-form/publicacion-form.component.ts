@@ -1,8 +1,18 @@
-import { ChangeDetectorRef, Component, ViewEncapsulation, ElementRef, ViewChild } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { ChangeDetectorRef, Component, ViewEncapsulation, ElementRef, ViewChild, inject } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { CommonModule } from '@angular/common';
-
+import { MatSnackBar, MatSnackBarConfig, MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import {
+	FormBuilder,
+	FormGroup,
+	FormsModule,
+	ReactiveFormsModule,
+	Validators,
+  } from '@angular/forms';
 import {
 	ClassicEditor,
 	AccessibilityHelp,
@@ -75,24 +85,71 @@ import {
 	Undo,
 	type EditorConfig
 } from 'ckeditor5';
-
+import { CKEditorComponent } from '@ckeditor/ckeditor5-angular';  // Import the CKEditorComponent
 import 'ckeditor5/ckeditor5.css';
 import translations from 'ckeditor5/translations/es.js';
+import { Publicacion } from '../../../shared/models/publicacion.model';
+import { CreacionPublicacionService } from '../../../core/services/creacion-publicacion.service';
 
 
 @Component({
   selector: 'app-publicacion-form',
   standalone: true,
-  imports: [RouterLink, CKEditorModule, CommonModule],
+  imports: [RouterLink, CKEditorModule, CommonModule, FormsModule, ReactiveFormsModule, MatButtonModule, MatInputModule, MatCardModule, MatSnackBarModule],
   templateUrl: './publicacion-form.component.html',
   styleUrls: ['./publicacion-form.component.css'],
   encapsulation: ViewEncapsulation.None
 })
 
 export class PublicacionFormComponent  {
-	@ViewChild('editorMenuBarElement') private editorMenuBar!: ElementRef<HTMLDivElement>;
 
-	constructor(private changeDetector: ChangeDetectorRef) {}
+	publicacionForm: FormGroup;
+	private fb = inject(FormBuilder);
+	private snackBar = inject(MatSnackBar);
+	private router = inject(Router);
+	private creacionPublicacionService = inject(CreacionPublicacionService);
+
+	constructor(private changeDetector: ChangeDetectorRef){
+		this.publicacionForm = this.fb.group({
+			titulo: ['', [Validators.required, Validators.pattern('[a-zA-Z +]*')]],
+			contenido: ['', [Validators.required, Validators.minLength(26)]],
+			resumen: ['', [Validators.required, Validators.minLength(15), Validators.pattern('[a-zA-Z +]*')]],
+			imagen: ['',[Validators.required]],
+
+		})
+	}
+	
+	controlHasError(control:string, error:string){
+		return this.publicacionForm.controls[control].hasError(error);
+	}
+	
+	showSnackBar(message:string) {
+		this.snackBar.open(message, 'Se ha hecho público su contenido.', {
+		  duration:3000,
+		  horizontalPosition: 'center',
+		  verticalPosition: 'bottom',
+		});
+	  }
+	onSubmit() {
+		if (this.publicacionForm.valid) {
+			const credentials = this.publicacionForm.value;
+			const publicacion: Publicacion = {
+				...this.publicacionForm.value,
+			}
+
+
+			console.log('Credenciales:',credentials);
+			this.creacionPublicacionService.addPublicacion(publicacion);
+			this.showSnackBar('Publicación Exitosa');
+
+			this.router.navigate(['creator/list-publicaciones']);
+		}
+	}
+//#region  Editor de Texto bonito
+	@ViewChild('editorMenuBarElement') private editorMenuBar!: ElementRef<HTMLDivElement>;
+	@ViewChild(CKEditorComponent) editorComponent!: CKEditorComponent; // Add this line to get a reference to the CKEditor
+
+
 
 	public isLayoutReady = false;
 	public Editor = ClassicEditor;
@@ -120,6 +177,7 @@ export class PublicacionFormComponent  {
 					'|',
 					'link',
 					'insertImageViaUrl',
+					'MediaEmbed',
 					'insertTable',
 					'highlight',
 					'blockQuote',
@@ -204,7 +262,7 @@ export class PublicacionFormComponent  {
 				Underline,
 				Undo
 			],
-			balloonToolbar: ['bold', 'italic', '|', 'link', '|', 'bulletedList', 'numberedList'],
+			balloonToolbar: ['bold', 'italic', '|', 'link','mediaEmbed', '|', 'bulletedList', 'numberedList'],
 			blockToolbar: [
 				'fontSize',
 				'fontColor',
@@ -214,6 +272,7 @@ export class PublicacionFormComponent  {
 				'italic',
 				'|',
 				'link',
+				'mediaEmbed',
 				'insertTable',
 				'|',
 				'bulletedList',
@@ -321,7 +380,7 @@ export class PublicacionFormComponent  {
 			menuBar: {
 				isVisible: true
 			},
-			placeholder: 'Type or paste your content here!',
+			placeholder: 'Escribe o pega tu contenido aquí!',
 			style: {
 				definitions: [
 					{
@@ -377,7 +436,14 @@ export class PublicacionFormComponent  {
 			translations: [translations]
 		};
 
+			  
 		this.isLayoutReady = true;
 		this.changeDetector.detectChanges();
+
 	}
+
+
+
+//#endregion
+
 }

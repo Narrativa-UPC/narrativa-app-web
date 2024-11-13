@@ -1,0 +1,29 @@
+<div class="container">
+    <div>
+        <h1 style="font-family:'Inter';">Lista de Publicaciones</h1>
+    </div>
+    <div class="text-center">
+        <div class="publicaciones">
+            <mat-card *ngFor="let publicacion of publicaciones" class="publicacion col" appearance="outlined">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4 publicacion">
+                            <img src="{{publicacion.imagen}}" class="img-fluid rounded" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ publicacion.titulo }}</h5>
+                                <div class="user-section">  
+                                    <div class="example-header-image"></div><p style="align-self: flex-end; text-align: right; margin-left: 10px;"> {{publicacion.creador}}</p>
+                                </div>
+                                <p class="card-text">{{publicacion.resumen}}</p>
+                            </div>
+                            <button mat-button class="custom-btn">LIKE</button>
+                            <button mat-button class="custom-btn">SHARE</button>
+                        </div>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>
