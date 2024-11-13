@@ -1,9 +1,52 @@
 <div class="container mt-1">
-  <form>
-    <div class="mb-3">
-      <h2 for="tituloPublicacion" class="form-label">Título de la Publicación</h2>
-      <div id="emailHelp" class="form-text">Usa un título llamativo y preciso para mejores resultados.</div>
-      <input type="text" class="form-control" id="publicacion_id" aria-describedby="tituloHelp">
+  <div class="mb-3">
+    <h1>Creador de Publicación</h1>
+  </div>
+  <form [formGroup]="publicacionForm" (ngSubmit)="onSubmit()" class="publicacion-form">
+
+    <div>
+      <mat-form-field appearance="outline" class="col-lg-3">
+        <mat-label>  
+          <label for="tituloPublicacion" class="form-label">Título de la Publicación</label>
+        </mat-label>
+        
+        <input matInput formControlName="titulo" placeholder="Ingresa tu Titulo" class="form-control" aria-describedby="tituloHelp">
+        @if(controlHasError('titulo', 'required')) {
+          <mat-error>Este campo es obligatorio</mat-error>
+        }
+        @if(controlHasError('titulo', 'pattern')) {
+          <mat-error>Este campo debe tener al menos una letra</mat-error>
+        }
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="outline" class="col-sm-12">
+        <mat-label>  
+          <label for="resumenPublicacion" class="form-label">Resumen del Contenido</label>
+        </mat-label>
+        
+        <input matInput formControlName="resumen" placeholder="Escribe tu resumen aquí" class="form-control" aria-describedby="resumenHelp">
+        @if(controlHasError('resumen', 'required')) {
+          <mat-error>Este campo es obligatorio</mat-error>
+        }
+        @if(controlHasError('resumen', 'pattern')) {
+          <mat-error>Este campo debe tener al menos una letra</mat-error>
+        }
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="outline" class="col-sm-4">
+        <mat-label>  
+          <label for="resumenPublicacion" class="form-label">Imagén Previa</label>
+        </mat-label>
+        
+        <input matInput formControlName="imagen" placeholder="Escribe tu resumen aquí" class="form-control" aria-describedby="resumenHelp">
+        @if(controlHasError('imagen', 'required')) {
+          <mat-error>Este campo es obligatorio</mat-error>
+        }
+      </mat-form-field>
     </div>
 
     <div class="mb-3">
@@ -11,15 +54,24 @@
           class="editor-container editor-container_classic-editor editor-container_include-style editor-container_include-block-toolbar"
           #editorContainerElement
         >
+
           <div class="editor-container__editor">
             <div #editorElement>
-              <ckeditor [editor]="Editor" [config]="config" *ngIf="isLayoutReady" />
+              <ckeditor [editor]="Editor" [config]="config"  *ngIf="isLayoutReady" matInput formControlName="contenido"  />
+              @if(controlHasError('contenido', 'required')) {
+                <mat-error>Este campo no puede estar vacio</mat-error>
+              }
+              @if(controlHasError('contenido', 'minLength')) {
+                <mat-error>Debe haber más de 10 characteres</mat-error>
+              }
             </div>
           </div>
         </div>
     </div>  
+
     <div class="d-flex justify-content-end">
-      <button type="submit" class="btn btn-primary btn-lg btn-publicar ml-auto">Submit</button>
+      <button type="submit" class="btn btn-primary btn-lg btn-publicar ml-auto" [disabled]="publicacionForm.invalid">
+        Publicar</button>
     </div>
   </form>
 

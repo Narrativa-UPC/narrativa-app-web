@@ -11,13 +11,37 @@
     background-color: #68A014; 
     border-color: #68A014;
 }
-
 .btn-publicar:hover{
     background-color: #F2F2F2;
     color: #0E0E10;
     border-color: #F2F2F2;
 }
+.btn-publicar:disabled{
+	background-color: #E5E5E5; 
+    border-color: #E5E5E5;
+	color: #A7A7A7;
+}
+.btn-publicar:active{
+	background-color: #A7A7A7 !important;
+    border-color: #A7A7A7 !important;
+    color: #0E0E10 !important; /* Ensure text color stays white when pressed */
+    outline: none !important; /* Prevent default browser outline */
+    box-shadow: none 
+}
+.btn-publicar:focus {
+    color: #0E0E10 !important;
+	outline: none;  
+	box-shadow: none;
+	background-color: #A7A7A7;
+	border-color: #A7A7A7;
+  }
 
+  .mat-form-field {
+	display: block; /* Makes the mat-form-field take full width */
+	width: 100%; /* Ensure it spans the width of the parent container */
+	margin-bottom: 1rem; /* Maintain spacing between fields */
+  }
+  
 
 .main-container {
 	font-family: 'Lato';
