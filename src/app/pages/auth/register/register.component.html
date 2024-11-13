@@ -1,1 +1,73 @@
-<p>register works!</p>
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="row w-100">
+      <!-- Logo y Título -->
+      <div class="col-md-6 text-center d-flex flex-column justify-content-center">
+        <img src="assets/images/logo.jpeg" alt="Narrativa Logo" class="img-fluid mb-3" style="max-width: 200px;">
+        <h2 class="text-success">Narrativa</h2>
+        <p class="h5">Registrarse:</p>
+      </div>
+  
+      <!-- Formulario de Registro -->
+      <div class="col-md-6">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="bg-white p-4 rounded shadow-sm">
+          <!-- Nombre Completo -->
+          <div class="form-group mb-3">
+            <label for="fullName" class="form-label">Nombre Completo</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+              <input type="text" id="fullName" formControlName="fullName" class="form-control" placeholder="Nombre Completo">
+            </div>
+            <div *ngIf="controlHasError('fullName', 'required')" class="text-danger small">
+              Este campo es obligatorio
+            </div>
+          </div>
+  
+          <!-- E-mail -->
+          <div class="form-group mb-3">
+            <label for="email" class="form-label">E-mail</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+              <input type="email" id="email" formControlName="email" class="form-control" placeholder="email">
+            </div>
+            <div *ngIf="controlHasError('email', 'required')" class="text-danger small">
+              Este campo es obligatorio
+            </div>
+            <div *ngIf="controlHasError('email', 'email')" class="text-danger small">
+              Introduzca un correo electrónico válido
+            </div>
+          </div>
+  
+          <!-- Contraseña -->
+          <div class="form-group mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-lock"></i></span>
+              <input type="password" id="password" formControlName="password" class="form-control" placeholder="Password">
+            </div>
+            <div *ngIf="controlHasError('password', 'required')" class="text-danger small">
+              Este campo es obligatorio
+            </div>
+            <div *ngIf="controlHasError('password', 'minlength')" class="text-danger small">
+              La contraseña debe tener al menos 6 caracteres
+            </div>
+          </div>
+  
+          <!-- Confirmación de Contraseña -->
+          <div class="form-group mb-3">
+            <label for="confirmPassword" class="form-label">Confirma Contraseña</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-lock"></i></span>
+              <input type="password" id="confirmPassword" formControlName="confirmPassword" class="form-control" placeholder="Password">
+            </div>
+            <div *ngIf="registerForm.hasError('passwordMismatch') && registerForm.get('confirmPassword')?.touched" class="text-danger small">
+              Las contraseñas no coinciden
+            </div>
+          </div>
+  
+          <!-- Botón de Registro -->
+          <button type="submit" class="btn btn-custom w-100 mt-3" [disabled]="registerForm.invalid">REGISTRARSE</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

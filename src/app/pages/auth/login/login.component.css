@@ -1,0 +1,59 @@
+/* Contenedor principal */
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 1200px;
+  max-height: 400px;
+}
+
+/* Sección de Logo y Título (Izquierda) */
+.logo-img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.login-title {
+  color: #68A014;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+/* Sección de formulario (Derecha) */
+.full-width {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Enlace de "¿Olvidaste tu contraseña?" */
+.forgot-password-link {
+  color: #68A014;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.login-card {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: none;
+}
+
+.mat-form-field {
+  margin-bottom: 1rem;
+}
+
+.btn-custom {
+  background-color: #68A014; 
+  color: white;
+}

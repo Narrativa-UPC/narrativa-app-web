@@ -1,0 +1,12 @@
+.container {
+    max-width: 100%;
+  }
+  
+  input::placeholder {
+    color: #b0b0b0;
+  }
+  
+  .btn-custom {
+    background-color: #68A014; 
+    color: white;
+  }
