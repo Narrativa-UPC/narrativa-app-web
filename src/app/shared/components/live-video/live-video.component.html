@@ -1,10 +1,12 @@
-<div class="live-videos">
-    <mat-card *ngFor="let video of liveVideos" class="live-video-card">
-      <img mat-card-image [src]="video.thumbnail" alt="{{ video.title }}">
-      <mat-card-content>
-        <h3>{{ video.title }}</h3>
-        <p>{{ video.category }} - {{ video.viewers }} viewers</p>
-      </mat-card-content>
-    </mat-card>
-  </div>
-  
+<h5>Videos en vivo que tal vez te interese</h5>
+<div class="live-videos row">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let video of liveVideos">
+        <mat-card class="live-video-card">
+            <img mat-card-image [src]="video.thumbnail" alt="{{ video.title }}">
+            <mat-card-content>
+                <h3>{{ video.title }}</h3>
+                <p>{{ video.category }} - {{ video.viewers }} viewers</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

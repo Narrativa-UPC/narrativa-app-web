@@ -1,6 +1,13 @@
-<mat-grid-list cols="6" rowHeight="100px" class="article-grid">
-    <mat-grid-tile *ngFor="let article of articles">
-      <img [src]="article.thumbnail" alt="{{ article.title }}">
-    </mat-grid-tile>
-  </mat-grid-list>
+<h5>Articulos que quizás te gusten</h5>
+<div class="article-grid row">
+  <div class="col-12 col-sm-6 col-md-4 col-lg-2" *ngFor="let article of articles">
+      <mat-card class="article-card">
+          <img mat-card-image [src]="article.thumbnail" alt="{{ article.title }}">
+          <mat-card-content>
+              <h3>{{ article.title }}</h3>
+              <p>{{ article.description }}</p>
+          </mat-card-content>
+      </mat-card>
+  </div>
+</div>
   

@@ -13,6 +13,7 @@ export class LiveVideoComponent {
   liveVideos = [
     { title: 'C++ vs Python', thumbnail: 'assets/images/cpp-python.jpg', category: 'Lenguaje de Programación', viewers: '1.5K' },
     { title: 'R Studio Inicio', thumbnail: 'assets/images/rstudio.jpg', category: 'Base de Datos', viewers: '3K' },
-    // Agrega más videos según sea necesario
+    { title: 'Manejo de Claude', thumbnail: 'assets/images/rstudio.jpg', category: 'Inteligencia articifial', viewers: '1K' },
+    { title: 'Instalacion de SQL', thumbnail: 'assets/images/rstudio.jpg', category: 'Base de datos', viewers: '200' },
   ];
 }

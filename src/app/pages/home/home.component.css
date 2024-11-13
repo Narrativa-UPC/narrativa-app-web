@@ -16,7 +16,7 @@
   
   /* Estilo para la barra de recomendaciones */
   .recomend-bar {
-    width: 20%; /* Ancho de la barra de recomendaciones */
+    width: 15%; /* Ancho de la barra de recomendaciones */
     height: calc(100vh - 60px); /* Altura completa del contenedor menos la altura de la barra de navegación */
     overflow-y: auto; /* Barra de desplazamiento vertical */
     padding: 10px;
@@ -28,8 +28,8 @@
   
   /* Estilo para el contenido principal */
   .main-content {
-    margin-left: 20%; /* Dejar espacio para la barra de recomendaciones */
-    width: 80%; /* Ancho del contenido principal */
+    margin-left: 15%; /* Dejar espacio para la barra de recomendaciones */
+    width: 85%; /* Ancho del contenido principal */
     overflow-y: auto; /* Barra de desplazamiento vertical */
     height: calc(100vh - 60px); /* Altura completa del contenedor menos la altura de la barra de navegación */
     padding: 10px;
