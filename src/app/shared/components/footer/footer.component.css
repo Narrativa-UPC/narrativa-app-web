@@ -2,8 +2,11 @@ footer {
     background-color: #68A014; /* Fondo oscuro acorde con el navbar */
     color: #ffffff; /* Texto claro */
     padding: none;
+    /*position: fixed; /* Fijo al final de la pantalla */
+
     margin-top: 15px;
     position:static; /* Fijo al final de la pantalla */
+
     width: 100%;
     bottom: 0;
   }
