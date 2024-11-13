@@ -1,0 +1,10 @@
+<div class="live-videos">
+    <mat-card *ngFor="let video of liveVideos" class="live-video-card">
+      <img mat-card-image [src]="video.thumbnail" alt="{{ video.title }}">
+      <mat-card-content>
+        <h3>{{ video.title }}</h3>
+        <p>{{ video.category }} - {{ video.viewers }} viewers</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

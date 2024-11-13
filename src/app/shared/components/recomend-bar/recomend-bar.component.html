@@ -1,0 +1,9 @@
+<div class="sidebar">
+    <mat-list>
+      <mat-list-item *ngFor="let channel of recommendedChannels">
+        <span class="channel-name">{{ channel.name }}</span>
+        <span class="viewers">{{ channel.viewers }}</span>
+        <span class="dot" [class.online]="channel.online"></span>
+      </mat-list-item>
+    </mat-list>
+  </div>

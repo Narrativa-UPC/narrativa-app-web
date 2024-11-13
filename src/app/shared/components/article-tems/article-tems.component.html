@@ -1,0 +1,6 @@
+<mat-grid-list cols="6" rowHeight="100px" class="article-grid">
+    <mat-grid-tile *ngFor="let article of articles">
+      <img [src]="article.thumbnail" alt="{{ article.title }}">
+    </mat-grid-tile>
+  </mat-grid-list>
+  

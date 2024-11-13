@@ -1,0 +1,45 @@
+.carousel-card {
+    margin: 0 auto; /* Centra el carrusel */
+    max-width: 800px; /* Ancho máximo para evitar que sea demasiado grande */
+    width: 100%; /* Ancho completo del carrusel */    
+  }
+  
+  /* Carrusel contenido */
+  .carousel-content {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+  }
+  
+  /* Estilos de imagen */
+  .carousel-image {
+    width: 100%; /* Ancho completo de la imagen */
+    height: auto; /* Mantén la proporción de la imagen */
+  }
+  
+  /* Estilos para la información del video */
+  .carousel-info {
+    padding: 10px;
+    text-align: left; /* Alineación del texto a la izquierda */
+  }
+  
+  /* Asegura que la imagen ocupe todo el ancho en pantallas pequeñas */
+  .carousel-image {
+    max-width: 100%;
+  }
+  .carousel-info p {
+    
+    margin-bottom: 2px; /* Reduce el espacio debajo de cada párrafo */
+  }
+ /* Cambiar el color de fondo y el color de los íconos para los botones prev y next */
+.custom-carousel-control {
+    background-color: none; /* Fondo oscuro, puedes usar cualquier color */
+    color: rgb(143, 136, 136);
+    border: none; /* Quitar el borde por defecto */
+    padding: 15px; /* Aumentar el tamaño del área clickeable */
+    border-radius: 50%; /* Hacer los botones circulares */
+    z-index: 10; /* Asegura que el botón esté sobre el contenido del carrusel */
+    transition: background-color 0.3s ease; /* Suavizar el cambio de color al hacer hover */
+    font-size: 24px; /* Tamaño de la fuente */
+  }
+  /* Asegurarse de que los botones no se superpongan al contenido */

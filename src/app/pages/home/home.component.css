@@ -1,0 +1,44 @@
+/* src/app/pages/home/home.component.css */
+
+.navbar-home {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+  }
+  
+  .home-layout {
+    display: flex;
+    height: 100vh; /* Altura completa de la ventana */
+    overflow: hidden; /* Ocultar el desbordamiento para evitar barras de desplazamiento globales */
+    padding-top: 60px; /* Altura de la barra de navegación */
+  }
+  
+  /* Estilo para la barra de recomendaciones */
+  .recomend-bar {
+    width: 20%; /* Ancho de la barra de recomendaciones */
+    height: calc(100vh - 60px); /* Altura completa del contenedor menos la altura de la barra de navegación */
+    overflow-y: auto; /* Barra de desplazamiento vertical */
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Sombra para separar visualmente */
+    position: fixed; /* Fijar la barra de recomendaciones */
+    top: 60px; /* Altura de la barra de navegación */
+    left: 0;
+  }
+  
+  /* Estilo para el contenido principal */
+  .main-content {
+    margin-left: 20%; /* Dejar espacio para la barra de recomendaciones */
+    width: 80%; /* Ancho del contenido principal */
+    overflow-y: auto; /* Barra de desplazamiento vertical */
+    height: calc(100vh - 60px); /* Altura completa del contenedor menos la altura de la barra de navegación */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre los componentes */
+  }
+  
+  /* Estilo para los componentes individuales */
+  .main-content > * {
+    flex: 0 0 auto; /* Evitar que los componentes se estiren */
+  }

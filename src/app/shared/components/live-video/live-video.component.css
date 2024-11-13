@@ -1,0 +1,9 @@
+.live-videos {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+  .live-video-card {
+    width: 200px;
+  }
+  
