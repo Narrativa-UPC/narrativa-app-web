@@ -2,9 +2,7 @@
     <div class="row w-100">
       <!-- Logo y Título -->
       <div class="col-md-6 text-center d-flex flex-column justify-content-center">
-        <img src="assets/images/logo.jpeg" alt="Narrativa Logo" class="img-fluid mb-3" style="max-width: 200px;">
-        <h2 class="text-success">Narrativa</h2>
-        <p class="h5">Registrarse:</p>
+        <img src="./assets/Images/logo.jpg" alt="Narrativa Logo" class="logo-img">
       </div>
   
       <!-- Formulario de Registro -->
@@ -12,7 +10,7 @@
         <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="bg-white p-4 rounded shadow-sm">
           <!-- Nombre Completo -->
           <div class="form-group mb-3">
-            <label for="fullName" class="form-label">Nombre Completo</label>
+            <label for="firstname" class="form-label">Nombre Completo</label>
             <div class="input-group">
               <span class="input-group-text"><i class="fas fa-user"></i></span>
               <input type="text" id="fullName" formControlName="fullName" class="form-control" placeholder="Nombre Completo">
@@ -54,7 +52,7 @@
   
           <!-- Confirmación de Contraseña -->
           <div class="form-group mb-3">
-            <label for="confirmPassword" class="form-label">Confirma Contraseña</label>
+            <label for="confirmPassword" class="form-label">Confirma Contraseñas</label>
             <div class="input-group">
               <span class="input-group-text"><i class="fas fa-lock"></i></span>
               <input type="password" id="confirmPassword" formControlName="confirmPassword" class="form-control" placeholder="Password">

@@ -1,0 +1,65 @@
+.example-card {
+    max-width: 100%;
+    margin-bottom: 20px; /* Added space between rows */
+}
+.container{
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+    height: 40px; /* Set height to make it look better */
+    width: 40px; /* Make it square */
+    border-radius: 50%; /* Optional: To make it round */
+        
+}
+.user-section{
+    display: flex;
+}
+.custom-btn{
+    color: #68A014 !important;
+    border-radius: 15px;
+}
+.custom-btn span{
+    color: white;
+}
+mat-card {
+    margin-bottom: 15px; /* Adjusts space between cards vertically */
+}
+.publicaciones{
+    padding: 40px;
+}
+.card-title{
+    font-family: 'Inter';
+    margin-bottom: 0px;
+}
+.card-text{
+    font-size:small;
+}
+
+.publicacion {
+    position: relative;
+    text-align: justify;
+    align-content: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.publicacion img {
+    max-width: 90%;         /* Prevent image from overflowing the container */
+    max-height: 90%;        /* Ensure the image fits within the container */
+    object-fit: contain;     /* Maintain aspect ratio while fitting the container */
+    margin: 10px auto;       /* Center the image horizontally */
+    display: block;          /* Ensures the image behaves like a block element */
+}
+.titulo-publicacion{
+    align-content: center;
+}
+.usuario-publicacion{
+    text-align: left;
+}
+.header-mat{
+    display: flex;
+}

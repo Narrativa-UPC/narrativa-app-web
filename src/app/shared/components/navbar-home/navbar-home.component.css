@@ -16,14 +16,14 @@
     transition: color 0.3s ease, background-color 0.3s ease;
   }
   
-  /* Estilo para la caja de búsqueda (input) */
+  
 .input-search {
-  background-color: #E5E5E5; /* Gris claro */
+  background-color: #E5E5E5; 
   color: #000000; 
-  padding: 0.375rem 0.75rem; /* Padding estándar para los inputs */
-  border-radius: 0.375rem; /* Bordes redondeados */
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem; 
   font-size: 1rem;
-  transition: all 0.3s ease; /* Transición suave al cambiar el color */
+  transition: all 0.3s ease; 
 }
 
 /* Estilo para el input cuando está en foco (cuando se selecciona) */
@@ -56,4 +56,11 @@
   
   .navbar-toggler {
     background-color: #E5E5E5; /* Toggler con borde claro */
+  }
+  .logo-navbar{
+    max-width: 250px;
+    margin-right: 20px;
+  }
+  .logo-navbar img{
+    max-width: 230px;
   }

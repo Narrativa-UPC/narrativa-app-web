@@ -3,6 +3,19 @@ footer {
     color: #ffffff; /* Texto claro */
     padding: none;
     /*position: fixed; /* Fijo al final de la pantalla */
+
+    margin-top: 15px;
+    position:static; /* Fijo al final de la pantalla */
+
     width: 100%;
     bottom: 0;
   }
+
+
+  footer .ext-start {
+    padding: 1rem;
+}
+
+footer .list-unstyled li {
+    margin-left: 20px; /* Add left margin to the list items */
+}

@@ -1,3 +1,4 @@
+import { AutheService } from './../../../core/services/authe.service';
 import { Component, inject } from '@angular/core';
 import { 
   FormBuilder,
@@ -15,6 +16,7 @@ import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { RouterLink } from '@angular/router';
+import { User } from './../../../shared/models/user.model';
 
 @Component({
   selector: 'app-register',
@@ -37,6 +39,7 @@ export class RegisterComponent {
   private fb = inject(FormBuilder);
   private snackBar = inject(MatSnackBar);
   private router = inject(Router);
+  private AutheService = inject(AutheService);
 
   constructor() {
     this.registerForm = this.fb.group({
@@ -68,12 +71,25 @@ export class RegisterComponent {
 
   onSubmit() {
     if (this.registerForm.valid) {
-      const user = this.registerForm.value;
-      console.log('Usuario registrado:', user);
-      this.showSnackBar('Registro exitoso');
-      this.router.navigate(['/home']);
-    } else {
-      this.showSnackBar('Por favor, completa todos los campos correctamente.');
+      const newUser: User = {
+      id: 0,
+      role: 'AUTHOR',
+      ...this.registerForm.value
+      };
+      const registerUser = this.AutheService.register(newUser);{
+        if(registerUser) {
+          this.showSnackBar(
+            `Registro exitoso, bienvenido ${registerUser.firstname}`
+          );
+          this.AutheService.login({
+            email: newUser.email,
+            password: newUser.password
+          });
+          this.router.navigate(['/auth/h']);
+        }else {
+          this.showSnackBar('Error al registrar el usuario');
+        }
+      }
     }
   }
 }

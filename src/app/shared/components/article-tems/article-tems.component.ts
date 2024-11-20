@@ -12,12 +12,12 @@ import { MatCardModule } from '@angular/material/card';
 })
 export class ArticleTemsComponent {
   articles = [
-    { title: 'ChatGPT', thumbnail: 'assets/images/chatgpt.jpg', description: 'Un modelo de lenguaje desarrollado por OpenAI.' },
-    { title: 'Cálculo', thumbnail: 'assets/images/calculo.jpg', description: 'Una rama de las matemáticas que estudia el cambio.' },
-    { title: 'ChatGPT', thumbnail: 'assets/images/chatgpt.jpg', description: 'Un modelo de lenguaje desarrollado por OpenAI.' },
-    { title: 'Cálculo', thumbnail: 'assets/images/calculo.jpg', description: 'Una rama de las matemáticas que estudia el cambio.' },
-    { title: 'ChatGPT', thumbnail: 'assets/images/chatgpt.jpg', description: 'Un modelo de lenguaje desarrollado por OpenAI.' },
-    { title: 'Cálculo', thumbnail: 'assets/images/calculo.jpg', description: 'Una rama de las matemáticas que estudia el cambio.' },
+    { title: 'ChatGPT', thumbnail: './assets/Images/chatGPT.jpg', description: 'Un modelo de lenguaje desarrollado por OpenAI.' },
+    { title: 'Cálculo', thumbnail: './assets/Images/fisica.jpg', description: 'Una rama de las matemáticas que estudia el cambio.' },
+    { title: 'ChatGPT', thumbnail: './assets/Images/chatGPT.jpg', description: 'Un modelo de lenguaje desarrollado por OpenAI.' },
+    { title: 'Cálculo', thumbnail: './assets/Images/fisica.jpg', description: 'Una rama de las matemáticas que estudia el cambio.' },
+    { title: 'ChatGPT', thumbnail: './assets/Images/chatGPT.jpg', description: 'Un modelo de lenguaje desarrollado por OpenAI.' },
+    { title: 'Cálculo', thumbnail: './assets/Images/fisica.jpg', description: 'Una rama de las matemáticas que estudia el cambio.' },
     // Agrega más artículos según sea necesario
   ];
 }

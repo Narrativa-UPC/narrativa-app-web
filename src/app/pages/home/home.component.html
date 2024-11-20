@@ -1,4 +1,9 @@
-<app-navbar-home class="navbar-home"></app-navbar-home>
+<!-- Mostrar NavbarHome si el usuario no está logueado -->
+<app-navbar-home *ngIf="!isLoggedIn" class="navbar-home"></app-navbar-home>
+
+<!-- Mostrar NavbarUser si el usuario está logueado -->
+<app-navbar-user *ngIf="isLoggedIn" class="navbar-user"></app-navbar-user>
+
 <div class="home-layout">
   <div class="recomend-bar">
     <app-recomend-bar></app-recomend-bar>
@@ -10,4 +15,5 @@
     <app-article-tems></app-article-tems>
   </div>
 </div>
+
 <app-footer></app-footer>
