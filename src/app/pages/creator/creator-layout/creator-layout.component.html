@@ -1,4 +1,8 @@
-<app-navbar-home></app-navbar-home>
+<!-- Mostrar NavbarHome si el usuario no está logueado -->
+<app-navbar-home *ngIf="!isLoggedIn" class="navbar-home"></app-navbar-home>
+
+<!-- Mostrar NavbarUser si el usuario está logueado -->
+<app-navbar-user *ngIf="isLoggedIn" class="navbar-user"></app-navbar-user>
 
 <div class="container">
     <router-outlet />
