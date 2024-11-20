@@ -1,36 +1,35 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-white">
-    <div class="container-fluid">
-      <!-- Logo a la izquierda fuera del collapse -->
-      <div class="logo-navbar">
-        <img src="./assets/Images/logo.jpg" alt="" >
-      </div>
-  
-      <!-- Contenedor para el formulario de búsqueda centrado entre el logo y los botones -->
-      <div class="d-flex ms-auto me-auto w-50">
-        <form class="d-flex w-100">
-          <input type="text" class="form-control border-0 input-search" placeholder="Buscar">
-          <button class="btn btn-light btn-custom" type="submit">
-            <i class="bi bi-search"></i> <!-- Ícono de lupa -->
-          </button>
-        </form>
-      </div>
-      
-      <!-- Botón de menú (collapse) en pantallas pequeñas -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHome" aria-controls="navbarHome" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <!-- Sección colapsable para los botones de "Iniciar Sesión" y "Registrarse" -->
-      <div class="collapse navbar-collapse" id="navbarHome">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link btn btn-outline-light px-3 me-2" routerLink="/auth/login" routerLinkActive="active">Iniciar Sesión</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link btn btn-primary text-white px-3" routerLink="/auth/register" routerLinkActive="active">Registrarse</a>
-          </li>
-        </ul>
-      </div>
+  <div class="container-fluid">
+    <!-- Logo a la izquierda fuera del collapse -->
+    <div class="logo-navbar">
+      <img src="./assets/Images/logo.jpg" alt="" >
     </div>
-  </nav>
-  
+
+    <!-- Contenedor para el formulario de búsqueda centrado entre el logo y los botones -->
+    <div class="d-flex ms-auto me-auto w-50">
+      <form class="d-flex w-100">
+        <input type="text" class="form-control border-0 input-search" placeholder="Buscar">
+        <button class="btn btn-light btn-custom" type="submit">
+          <i class="bi bi-search"></i> <!-- Ícono de lupa -->
+        </button>
+      </form>
+    </div>
+    
+    <!-- Botón de menú (collapse) en pantallas pequeñas -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHome" aria-controls="navbarHome" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- Sección colapsable para los botones de "Iniciar Sesión" y "Registrarse" -->
+    <div class="collapse navbar-collapse" id="navbarHome">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link btn btn-outline-light px-3 me-2" routerLink="/auth/login" routerLinkActive="active">Iniciar Sesión</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-primary text-white px-3" routerLink="/auth/register" routerLinkActive="active">Registrarse</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

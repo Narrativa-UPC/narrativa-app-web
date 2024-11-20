@@ -11,9 +11,9 @@ import { CommonModule } from '@angular/common';
 })
 export class LiveVideoComponent {
   liveVideos = [
-    { title: 'C++ vs Python', thumbnail: 'assets/images/cpp-python.jpg', category: 'Lenguaje de Programación', viewers: '1.5K' },
-    { title: 'R Studio Inicio', thumbnail: 'assets/images/rstudio.jpg', category: 'Base de Datos', viewers: '3K' },
-    { title: 'Manejo de Claude', thumbnail: 'assets/images/rstudio.jpg', category: 'Inteligencia articifial', viewers: '1K' },
-    { title: 'Instalacion de SQL', thumbnail: 'assets/images/rstudio.jpg', category: 'Base de datos', viewers: '200' },
+    { title: 'C++ vs Python', thumbnail: './assets/Images/cpp-vs-python.gif', category: 'Lenguaje de Programación', viewers: '1.5K' },
+    { title: 'R Studio Inicio', thumbnail: './assets/Images/rstudio.jpg', category: 'Base de Datos', viewers: '3K' },
+    { title: 'Manejo de Claude', thumbnail: './assets/Images/mClaude.jpg', category: 'Inteligencia articifial', viewers: '1K' },
+    { title: 'Instalacion de SQL', thumbnail: './assets/Images/installSQL.jpg', category: 'Base de datos', viewers: '200' },
   ];
 }

@@ -16,11 +16,12 @@
 
 /* Sección de Logo y Título (Izquierda) */
 .logo-img {
-  width: 60px;
-  height: 60px;
+  width: 600px;
+  height: 600px;
   margin-bottom: 10px;
   max-width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
 .login-title {

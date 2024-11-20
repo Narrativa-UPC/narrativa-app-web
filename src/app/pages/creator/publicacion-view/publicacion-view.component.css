@@ -1,0 +1,137 @@
+/* Main container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Title for the publication */
+  .publication-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* The card wrapper */
+  .publication-card-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  /* Card container with shadow and rounded edges */
+  .publicacion-card {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover effect for the card */
+  .publicacion-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Card image section */
+  .publicacion-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* Card body styling */
+  .card-body {
+    padding: 20px;
+  }
+  
+  /* Card title */
+  .card-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  /* Creator info */
+  .creator-name {
+    font-size: 1rem;
+    color: #7f8c8d;
+    text-align: right;
+    margin-top: 10px;
+  }
+  
+  /* Card description text */
+  .card-text {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-top: 20px;
+    line-height: 1.6;
+  }
+  
+  /* Content section with sanitized HTML */
+  div[innerHTML] {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #34495e;
+  }
+  
+  /* Button container */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  /* Individual button styles */
+  .custom-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+  }
+  
+  .like-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+  }
+  
+  .like-btn:hover {
+    background-color: #2980b9;
+    cursor: pointer;
+  }
+  
+  .share-btn {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+  }
+  
+  .share-btn:hover {
+    background-color: #27ae60;
+    cursor: pointer;
+  }
+  
+  /* Fallback message for no publication */
+  #noPublicacion {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.3rem;
+    color: #e74c3c;
+  }
+  
+  #noPublicacion h1 {
+    font-size: 2rem;
+    color: #c0392b;
+  }
+  
+  #noPublicacion p {
+    color: #7f8c8d;
+  }
+  

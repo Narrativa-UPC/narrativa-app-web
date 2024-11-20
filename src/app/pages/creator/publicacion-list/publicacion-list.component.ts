@@ -4,14 +4,14 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { Publicacion } from '../../../shared/models/publicacion.model';
-import { Router } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 
 @Component({
   selector: 'app-publicacion-list',
   standalone: true,
-  imports: [MatCardModule, MatButtonModule, CommonModule],
+  imports: [MatCardModule, MatButtonModule, CommonModule, RouterLink,RouterOutlet],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './publicacion-list.component.html',
   styleUrl: './publicacion-list.component.css'

@@ -1,0 +1,44 @@
+<div *ngIf="publicacion; else noPublicacion">
+    <div class="container">
+      <h1 class="publication-title">{{ publicacion.titulo }}</h1>
+  
+      <div class="publication-card-wrapper">
+        <mat-card class="publicacion-card" appearance="outlined">
+          <div class="row g-0">
+  
+            <!-- Card Body Section (text content) -->
+            <div class="col-md-8 content-container">
+              <div class="card-body">
+                <h5 class="card-title">{{ publicacion.titulo }}</h5>
+                <div class="user-section">
+                  <p class="creator-name">Creado por: {{ publicacion.creador }}</p>
+                </div>
+                <p class="card-text">{{ publicacion.resumen }}</p>
+  
+                <!-- Display the sanitized content if available -->
+                <div *ngIf="publicacion.contenido">
+                  <div [innerHTML]="getSanitizedContent(publicacion.contenido)">
+                  </div>
+                </div>
+  
+                <!-- Buttons or Actions (e.g., Like, Share) -->
+                <div class="button-container">
+                  <button mat-button class="custom-btn like-btn">LIKE</button>
+                  <button mat-button class="custom-btn share-btn">SHARE</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Template for the case when no publicacion is available -->
+  <ng-template #noPublicacion>
+    <div class="container">
+      <h1>No se encontró la publicación</h1>
+      <p>Lo sentimos, no pudimos encontrar la publicación que estás buscando.</p>
+    </div>
+  </ng-template>
+  
