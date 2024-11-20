@@ -10,3 +10,11 @@
     background-color: #68A014; 
     color: white;
   }
+  .logo-img {
+    width: 600px;
+    height: 600px;
+    margin-bottom: 10px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }

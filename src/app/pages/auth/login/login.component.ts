@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { AutheService } from './../../../core/services/authe.service';
 import {
   FormBuilder,
   FormGroup,
@@ -35,6 +36,7 @@ export class LoginComponent {
   private fb = inject(FormBuilder);
   private snackBar = inject(MatSnackBar);
   private router = inject(Router);
+  private AutheService = inject(AutheService);
 
   constructor() {
     this.loginForm = this.fb.group({
@@ -58,9 +60,24 @@ export class LoginComponent {
   onSubmit() {
     if (this.loginForm.valid) {
       const credentials = this.loginForm.value;
-      console.log('Credenciales:', credentials);
-      this.router.navigate(['/home']);
-      this.showSnackBar('Inicio de sesión exitoso');
+      const user = this.AutheService.login(credentials);
+      
+      if (user) {
+        // Si el usuario existe y el login es exitoso
+        this.showSnackBar(`Bienvenido, ${user.firstname}`);
+        
+        if (user.role === 'CREATOR') {
+          this.router.navigate(['/homelogged']);
+        } else if (user.role === 'USER') {
+          this.router.navigate(['/homelogged']);
+        }
+  
+        // Redirige solo después de un login exitoso
+        console.log('Credenciales:', credentials);
+      } else {
+        // Si no se encuentra el usuario o la contraseña es incorrecta
+        this.showSnackBar('Correo o contraseña incorrectos.');
+      }
     }
   }
-}
+}  

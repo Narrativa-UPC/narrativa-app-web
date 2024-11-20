@@ -1,0 +1,77 @@
+.navbar {
+    background-color: #343a40; /* Fondo oscuro */
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    color: #000000; 
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+  }
+  
+  .nav-link {
+    font-size: 1.1rem;
+    color: #f8f9fa;
+    margin-right: 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Estilo para la caja de búsqueda (input) */
+.input-search {
+  background-color: #E5E5E5; /* Gris claro */
+  color: #000000; 
+  padding: 0.375rem 0.75rem; /* Padding estándar para los inputs */
+  border-radius: 0.375rem; /* Bordes redondeados */
+  font-size: 1rem;
+  transition: all 0.3s ease; /* Transición suave al cambiar el color */
+}
+
+/* Estilo para el input cuando está en foco (cuando se selecciona) */
+.input-search:focus {
+  border-color: #ffffff; 
+  outline: none;
+}
+
+  /* Botón de Iniciar Sesión con borde blanco para buen contraste */
+  .btn-outline-light {
+    background-color: #F2F2F2;
+    color: #000000; 
+    font-weight: bold;
+  }
+  
+  .btn-outline-light:hover {
+    background-color: #E5E5E5; /* Fondo blanco suave al hacer hover */
+    color: #000000;
+  }
+  
+  /* Botón de Registrarse (CTA principal) con verde bajo */
+  .btn-primary {
+    background-color: #68A014; /* Verde bajo */
+    border: none;
+    color: #ffffff; /* Texto blanco para contraste */
+  }
+  
+  .btn-primary:hover {
+    background-color: #218838; /* Verde más oscuro al hacer hover */
+  }
+  
+  .navbar-toggler {
+    background-color: #E5E5E5; /* Toggler con borde claro */
+  }
+  .logo-navbar{
+    max-width: 250px;
+    margin-right: 20px;
+  }
+  .logo-navbar img{
+    max-width: 230px;
+  }
+  /* Estilo para el ícono de usuario */
+  .user-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Hace que el contenedor sea un círculo */
+    background-size: cover; /* Asegura que la imagen de fondo cubra todo el contenedor */
+    background-position: center; /* Centra la imagen dentro del círculo */
+    border: 2px solid #fff; /* Opcional: agrega un borde blanco alrededor del ícono */
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); /* Opcional: agrega una pequeña sombra al ícono */
+  }
