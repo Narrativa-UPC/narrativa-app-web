@@ -4,7 +4,9 @@
     </div>
     <div class="text-center">
         <div class="publicaciones">
-            <mat-card *ngFor="let publicacion of publicaciones" class="publicacion col" appearance="outlined">
+            <mat-card *ngFor="let publicacion of publicaciones" class="publicacion col" appearance="outlined" 
+              [routerLink]="['/creator/publicacion-view', publicacion.id]" 
+              class="clickable-card">
                 <div class="card mb-3">
                     <div class="row g-0">
                         <div class="col-md-4 publicacion">
